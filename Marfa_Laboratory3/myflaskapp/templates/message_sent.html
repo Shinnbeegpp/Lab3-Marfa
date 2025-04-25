@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Sent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>Thank You!</h1>
+</header>
+<div class="container">
+    <h2>Your message has been sent to the Developer. ✅</h2>
+    <p>Would you like to send another?</p>
+
+    <div class="button-row">
+        <form action="{{ url_for('contacts') }}">
+            <button type="submit">Yes</button>
+        </form>
+        <form action="{{ url_for('home') }}">
+            <button type="submit">No</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
